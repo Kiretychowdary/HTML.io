@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            width: 20px;
+            height:200px;
+            position: relative;
+            padding:75px 90px;
+            margin-left:120px;             
+             
+        }
+        .radial-bars
+        {
+            width:100%;
+            /* display:flex; */
+            /* flex-wrap:wrap; */
+            /* justify-content:space-evenly; */
+            /* align-items: flex-start; */
+        }
+        .radial-bars .radial-bar{
+            width:50%;
+            height:170px;
+            margin-bottom:60px;
+            position: relative;;
+        }
+        .radial-bars .radial-bar svg{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(-90deg);
+            width:120px;
+            height:160px;
+        }
+        .radial-bars .radial-bar .progrress-bar
+        {
+            stroke-width: 10;
+            stroke:black;
+            stroke-dasharray:502;
+            stroke-dashoffset: 502;
+            stroke-linecap:round;
+            animation: animate-bar 1s linear forwards;
+        }
+        @keyframes animate-bar{
+            100%{
+                stroke-dashoffset: -1;
+            }
+        }
+        .path
+        {
+            stroke-width: 10;
+            stroke:cyan;
+            stroke-dasharray:502;
+            stroke-dashoffset: 502;
+            stroke-linecap:round; 
+            fill:transparent;
+        }
+
+        </style>
+</head>
+<body>
+    <div class="container1">
+        <h1 class="heading1">Professional Skills</h1>
+        <div class="radial-bars">
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100"cy="100" r="30"></circle>
+                    <circle class="path path-1"  cx="100" cy="100" r="30"></circle>
+                </svg>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100"cy="100" r="30"></circle>
+                    <circle class="path path-1"  cx="100" cy="100" r="30"></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

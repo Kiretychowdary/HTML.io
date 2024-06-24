@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            position:relative;
+            left:50%;
+            top:40%;
+
+        }
+      
+        #div1
+        {
+            position:absolute;
+            width:100px;
+            display: flex;
+            flex-direction: row;
+            transition:4s;
+            top:50%;
+            transition:3s;
+            left:-30%;
+            overflow:hidden;
+            height:100px;
+        }
+        img{
+            height:100px;
+            width:100px;
+        }
+        .imga
+        {
+            height:100%;
+            width:100%;
+        }
+       #btn1{
+            position: absolute;
+            top: 70%;
+            left:30%;
+            margin-left:30px;
+        }
+        #btn2
+        {
+            position:absolute;
+            top:70%;
+            left:50%;
+        }
+        #d1
+        {
+            position: absolute;
+            height:400px;
+            width:400px;
+            top:30%;
+            border:2px solid black;
+            transition:4s;
+            left:30%;
+        }
+        #d1 img{
+            width:400px;
+            height:400px;
+
+        }
+        </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="div1">
+       
+        <div class="imga"><img src="LORDKRISHNA_LOVE.JPG" alt="MYLOVEKRISHNA"></div>
+        <div class="imga"><img src="Shiva.jpg" alt="SHIVAMYLOVE"></div>
+        <div class="imga"><img src="LOVE.jpeg" alt="VINAYAKAMYLOVE"></div>
+    </div>
+    <!-- <button id="btn2">next</button>
+    <button id="btn1">Prev</button> -->
+    
+
+        <script>
+            console.log("RADHAKRISHNA");
+            console.log("SHIVAPARVATI SITARAMA RADHAKRISHNA");
+            const img1=document.querySelectorAll("img");
+            const d1=document.querySelector("#d1");
+            const d2=document.querySelector("#div1");
+            let ind=0;
+            d1.appendChild(img1[ind].cloneNode());
+            // document.querySelector("#btn1").addEventListener("click",function(){
+            //     if(ind>0)
+            //     {
+            //         console.log("RADHAKRISHNA SHIVAPARVATHI SITARAMA");
+            //         d2.append(img1[ind]);
+            //         ind-=1;
+            //         d1.appendChild(img1[ind]);
+            //     }
+            //     else{
+            //         console.log("RAHDAKRISHNA SHIVAPARVATHI SITARAMA");
+            //         ind=0;
+            //         d1.appendChild(img1[ind]);
+            //     }
+
+            // })
+            
+            
+            // document.querySelector("#btn2").addEventListener("click", function () {
+            //     if(ind<img1.length){
+            //     console.log("RAHDAKRISHNA SHIVAPARVATHI SITARAMA");
+            //     // p.style.transform=`translateX(-${100}px)`;
+            //     d2.append(img1[ind]);
+            //     ind+=1;
+            //     d1.appendChild(img1[ind]);
+            //     }
+            //     else if(ind==3){
+            //         console.log("RAHDAKRISHNA SHIVAPARVATHI SITARAMA");
+            //         ind=0;
+            //         d1.appendChild(img1[ind]);
+            //     }
+
+            // })
+
+
+            const i=setInterval(()=>{
+                console.log(ind);
+                if(ind<img1.length){
+                  
+                console.log("RAHDAKRISHNA SHIVAPARVATHI SITARAMA");
+                // p.style.transform=`translateX(-${100}px)`;
+                d2.appendChild(img1[ind].cloneNode());
+                ind+=1;
+                d1.innerHTML="";
+                d1.appendChild(img1[ind].cloneNode());
+                console.log("done");
+                console.log(img1.length);
+                }
+                else{
+                    console.log("RAHDAKRISHNA SHIVAPARVATHI SITARAMA");
+                    ind=0;
+                    d1.innerHTML="";
+                    d1.appendChild(img1[ind].cloneNode());
+                }
+                
+            },1000);
+            
+        </script>
+         <!-- <section>
+        <h1>Random Color</h1>
+        <div>
+        </div>
+        <button class="b1">Click me</button>
+    </section>
+    <script>
+        let btn=document.getElementsByClassName("b1")[0];
+        btn.addEventListener("click",function(){
+            let p=document.querySelector("div");
+            let c=getRandomColor();
+            console.log(c);
+            p.style.backgroundColor =c;
+        })
+        function getRandomColor()
+        {
+            let a=Math.floor(Math.random()*255);
+            let b=Math.floor(Math.random()*255);
+            let c=Math.floor(Math.random()*255);
+            let color=`rgb(${a},${b},${c})`;
+            return color;
+        }
+        </script> -->
+</body>
+
+</html>
